@@ -1,0 +1,169 @@
+{
+    "entryPoint" : "",
+    "scenes": {
+        "exemple": {
+            "id" : "exemple",
+            "type": "text",
+            "ressource": "",
+            "choices": [
+                {
+                    "label": "",
+                    "sceneId": "",
+                    "conditions": [
+                        {
+                            "varName": "",
+                            "operator": "",
+                            "value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "pKn_debut": {
+            "type": "text",
+            "text": "Première scène",
+            "ressource": "",
+            "choices": [
+                {
+                    "label":"Des suspects potentiels ?",
+                    "sceneId": "p1n_des_suspects_potentiels_"
+                },
+                {
+                    "label": "Le moyen de transport utilisé ?",
+                    "sceneId": "p1n_le_moyen_de_transport_utilise_"
+                }
+            ]
+        },
+        "p1n_des_suspects_potentiels_": {
+            "type": "text",
+            "text": "Des suspects potentiels",
+            "choices": [
+                {
+                    "label": "Il a joué sur l'assurance !",
+                    "sceneId": "p1n_il_a_joue_sur_l_assurance_",
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "p1n_le_moyen_de_transport_utilise_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Le moyen de transport utilisé ?",
+                    "sceneId": "p1n_le_moyen_de_transport_utilise_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "p1n_le_moyen_de_transport_utilise_"
+                        }
+                    ]
+                }
+            ]
+        },
+        "p1n_le_moyen_de_transport_utilise_": {
+            "type": "text",
+            "text": "Le moyen de transport utilisé ?",
+            "choices": [
+                {
+                    "label": "Il a joué sur l'assurance !",
+                    "sceneId": "p1n_il_a_joue_sur_l_assurance_",
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "p1n_des_suspects_potentiels_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Des suspects potentiels ?",
+                    "sceneId": "p1n_des_suspects_potentiels_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "p1n_des_suspects_potentiels_"
+                        }
+                    ]
+                }
+            ]
+        },
+        "p1n_il_a_joue_sur_l_assurance_": {
+            "type": "text",
+            "text": "Il a joué sur l'assurance !",
+            "choices": [
+                {
+                    "label": "Mais oui, c’est ça, évidemment !",
+                    "sceneId": "p1n_mais_oui_c’est_ca_evidemment_"
+                },
+                {
+                    "label": "Ne posons pas de conclusions hâtives",
+                    "sceneId": "p1n_ne_posons_pas_de_conclusions_hâtives"
+                }
+
+            ]
+        },
+        "p1n_mais_oui_c’est_ca_evidemment_": {
+            "type": "text",
+            "text": "Mais oui, c’est ça, évidemment !",
+            "choices": [
+                {
+                    "label": "Retour au début",
+                    "sceneId": "pKn_debut"
+                }
+            ]
+        },
+        "p1n_ne_posons_pas_de_conclusions_hâtives": {
+            "type":"text",
+            "text":"Ne posons pas de conclusions hâtives",
+            "choices":[
+                {
+                    "label":"Documentation",
+                    "sceneId":"p1n_documentation"
+                }
+            ]
+        },
+        "p1n_documentation": {
+            "type": "text",
+            "text": "Documentation",
+            "choices": [
+                {
+                    "label": "Mettre le badge",
+                    "sceneId": "p1n_mettre_le_badge"
+                },
+                {
+                    "label": "Ne pas mettre le badge",
+                    "sceneId": "p1n_ne_pas_mettre_le_badge"
+                }
+            ]
+        },
+        "p1n_mettre_le_badge": {
+            "type": "text",
+            "text": "p1n_mettre_le_badge",
+            "choices": [
+                {
+                    "label": "Interrogatoire respo-foyer",
+                    "sceneId": "p2n_debut"
+                }
+            ]
+        },
+        "p1n_ne_pas_mettre_le_badge": {
+            "type": "text",
+            "text": "Ne pas mettre le badge",
+            "choices": [
+                {
+                    "label": "Interrogatoire respo-foyer",
+                    "sceneId": "p2n_debut"
+                }
+            ]
+        },
+        "p2n_debut": {
+            "type": "text",
+            "text": "Interrogatoire respo-foyer",
+            "choices": [
+                {
+                    "label": "Retour au début",
+                    "sceneId": "pKn_debut"
+                }
+            ]
+        }
+    }
+}
