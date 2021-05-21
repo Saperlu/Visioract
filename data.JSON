@@ -2,7 +2,6 @@
     "entryPoint" : "",
     "scenes": {
         "exemple": {
-            "id" : "exemple",
             "type": "text",
             "ressource": "",
             "choices": [
@@ -19,7 +18,7 @@
                 }
             ]
         },
-        "pKn_debut": {
+        "p1n_debut": {
             "type": "text",
             "text": "Première scène",
             "ressource": "",
@@ -31,6 +30,10 @@
                 {
                     "label": "Le moyen de transport utilisé ?",
                     "sceneId": "p1n_le_moyen_de_transport_utilise_"
+                },
+                {
+                    "label": "Interrogatoire Karl",
+                    "sceneId": "p3n_interrogatoire_karl"
                 }
             ]
         },
@@ -161,9 +164,440 @@
             "choices": [
                 {
                     "label": "Retour au début",
-                    "sceneId": "pKn_debut"
+                    "sceneId": "p2n_j’ai_le_badge"
+                }
+            ]
+        },
+        "p2n_j’ai_le_badge": {
+            "type": "text",
+            "text": "J’ai le badge",
+            "choices": [
+                {
+                    "label": "Arrivée au foyer",
+                    "sceneId": "p2n_arrivee_au_foyer"
+                }
+            ]
+        },
+        "p2n_j’ai_pas_le_badge": {
+        "type": "text",
+        "text": "J'ai pas le badge",
+            "choices": [
+                {
+                    "label": "Arrivée au foyer",
+                    "sceneId": "p2n_arrivee_au_foyer"
+                }
+            ]
+        },
+        "p2n_arrivee_au_foyer": {
+        "type": "text",
+        "text": "Arrivée au foyer",
+            "choices": [
+                {
+                    "label": "Menu",
+                    "sceneId": "Arrivée au foyer"
+                }
+            ]
+        },
+        "p2n_menu": {
+        "type": "text",
+        "text": "Menu principal",
+            "choices": [
+                {
+                    "label": "",
+                    "sceneId": "p2n_aviez-vous_deja_eu_des_dons_comme_ca_par_le_passe_"
+                },
+                {
+                    "label": "",
+                    "sceneId": "p2n_comment_avez_vous_decouvert_cette_livraison_"
+                },
+                {
+                    "label": "",
+                    "sceneId": "p2n_vous_pouvez_me_montrer_où_exactement_etait_le_colis_"
+                },
+                {
+                    "label": "",
+                    "sceneId": "p2n_finir_l_interrogatoire"
+                }
+            ]
+        },
+        "p2n_aviez-vous_deja_eu_des_dons_comme_ca_par_le_passe_": {
+        "type": "text",
+        "text": "Aviez-vous déjà eu des dons comme ça par le passé ?",
+            "choices": [
+                {
+                    "label": "Quel est votre fournisseur de viennoiseries habituel ?",
+                    "sceneId": "p2n_qui_est_votre_fournisseur_de_viennoiserie_habituel_"
+                }
+            ]
+        },
+        "p2n_qui_est_votre_fournisseur_de_viennoiserie_habituel_": {
+        "type": "text",
+        "text": "Quel est votre fournisseur de viennoiseries habituel ?",
+            "choices": [
+                {
+                    "label": "Menu principal",
+                    "sceneId": "p2n_menu"
+                }
+            ]
+        },
+        "p2n_comment_avez_vous_decouvert_cette_livraison_": {
+        "type": "text",
+        "text": "Comment avez-vous découvert cette livraison ?",
+            "choices": [
+                {
+                    "label": "",
+                    "sceneId": ""
+                }
+            ]
+        },
+        "p2n_vous_pouvez_me_montrer_où_exactement_etait_le_colis_": {
+        "type": "text",
+        "text": "Vous pouvez me montrer où exactement était le colis ?",
+            "choices": [
+                {
+                    "label": "",
+                    "sceneId": ""
+                }
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+        "p3n_interroger_les_suspects": {
+            "type": "text",
+            "text": "Interroger les suspects.",
+            "choices": [
+                {
+                    "label": "Interrogatoire Karl",
+                    "sceneId": "p3n_interrogatoire_karl"
+                }
+            ]
+        },
+
+
+
+
+
+
+        "p3n_interrogatoire_karl": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Interroger sur l'assurance de la boulangerie",
+                    "sceneId": "pKn_assurance"
+                },
+                {
+                    "label": "Montrer la clé trouvée à l'UTT",
+                    "sceneId": "pKn_clef"
+                }
+            ]
+        },
+        "pKn_assurance": {
+            "type": "text",
+            "text": "Assurance",
+            "choices": [
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_menu_principal": {
+            "type": "text",
+            "text": "MENU PRINCIPAL",
+            "choices": [
+                {
+                    "label": "antécédents bertrand",
+                    "sceneId": "pKn_antecedents_bertrand",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_antecedents_bertrand"
+                        }
+                    ]
+                },
+                {
+                    "label": "sport",
+                    "sceneId": "pKn_sport",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_sport"
+                        }
+                    ]
+                },
+                {
+                    "label": "UTT",
+                    "sceneId": "pKn_utt",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_utt"
+                        }
+                    ]
+                },
+                {
+                    "label": "Alibi",
+                    "sceneId": "pKn_alibi",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_alibi"
+                        }
+                    ]
+                },
+                {
+                    "label": "Finir Interrogatoire",
+                    "sceneId": "pKn_finir_interrogatoire"
+                },
+                {
+                    "label": "clef",
+                    "sceneId": "pKn_clef",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_clef"
+                        }
+                    ]
+                }
+            ]
+        },
+        "pKn_antecedents_bertrand": {
+            "type": "text",
+            "text": "antécédents bertrand",
+            "choices": [
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_sport": {
+            "type": "text",
+            "text": "sport",
+            "choices": [
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_utt": {
+            "type": "text",
+            "text": "UTT",
+            "choices": [
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_alibi": {
+            "type": "text",
+            "text": "Alibi",
+            "choices": [
+                {
+                    "label": "Qu'avez-vous mangé",
+                    "sceneId": "pKn_qu_avez_vous_mange"
+                },
+                {
+                    "label": "ou étiez-vous ?",
+                    "sceneId": "pKn_ou_etiez_vous_"
+                },
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_ou_etiez_vous_": {
+            "type": "text",
+            "text": "ou étiez-vous ?",
+            "choices": [
+                {
+                    "label": "les faits se sont déroulés",
+                    "sceneId": "pKn_les_faits_se_sont_deroules"
+                },
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_qu_avez_vous_mange": {
+            "type": "text",
+            "text": "Qu'avez-vous mangé",
+            "choices": [
+                {
+                    "label": "les faits se sont déroulés",
+                    "sceneId": "pKn_les_faits_se_sont_deroules"
+                },
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_les_faits_se_sont_deroules": {
+            "type": "text",
+            "text": "les faits se sont déroulés",
+            "choices": [
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
+                }
+            ]
+        },
+        "pKn_finir_interrogatoire": {
+            "type": "text",
+            "text": "Finir Interrogatoire",
+            "choices": [
+                {
+                    "label": "~ Interroger Géraldine",
+                    "sceneId": "pKn_~_interroger_geraldine"
+                },
+                {
+                    "label": "~ Interroger Bertrand",
+                    "sceneId": "pKn_~_interroger_bertrand"
+                },
+                {
+                    "label": "~ FIN",
+                    "sceneId": "pKn_~_fin"
+                }
+            ]
+        },
+        "pKn_clef": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Monsieur Goudran, c'est un de vos employés ?",
+                    "sceneId": "pKn_mgoudran",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*self"
+                        }
+                    ]
+                },
+                {
+                    "label": "Mademoiselle Dupreux est une de vos employés ?",
+                    "sceneId": "pKn_mlledupreux",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*self"
+                        }
+                    ]
+                },
+                {
+                    "label": "Parlez moi de votre femme...",
+                    "sceneId": "pKn_femme",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*self"
+                        }
+                    ]
+                },
+                {
+                    "label": "Poser d'autres questions",
+                    "sceneId": "pKn_fin_clef_suite",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*self"
+                        }
+                    ]
+                }
+            ]
+        },
+        "pKn_clefs___menu": {
+            "type": "text",
+            "text": "Clefs - MENU",
+            "choices": [
+                {
+                    "label": "Femme",
+                    "sceneId": "pKn_femme",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_femme"
+                        }
+                    ]
+                },
+                {
+                    "label": "Mlle.Dupreux",
+                    "sceneId": "pKn_mlledupreux",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_mlledupreux"
+                        }
+                    ]
+                },
+                {
+                    "label": "M.goudran",
+                    "sceneId": "pKn_mgoudran",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "pKn_mgoudran"
+                        }
+                    ]
+                },
+                {
+                    "label": "FIN clef suite",
+                    "sceneId": "pKn_fin_clef_suite"
+                }
+            ]
+        },
+        "pKn_mgoudran": {
+            "type": "text",
+            "text": "M.goudran",
+            "choices": [
+                {
+                    "label": "Clefs - MENU",
+                    "sceneId": "pKn_clefs___menu"
+                }
+            ]
+        },
+        "pKn_femme": {
+            "type": "text",
+            "text": "Femme",
+            "choices": [
+                {
+                    "label": "Clefs - MENU",
+                    "sceneId": "pKn_clefs___menu"
+                }
+            ]
+        },
+        "pKn_mlledupreux": {
+            "type": "text",
+            "text": "Mlle.Dupreux",
+            "choices": [
+                {
+                    "label": "Clefs - MENU",
+                    "sceneId": "pKn_clefs___menu"
+                }
+            ]
+        },
+        "pKn_fin_clef_suite": {
+            "type": "text",
+            "text": "FIN clef suite",
+            "choices": [
+                {
+                    "label": "MENU PRINCIPAL",
+                    "sceneId": "pKn_menu_principal"
                 }
             ]
         }
+        
     }
 }

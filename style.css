@@ -3,10 +3,11 @@ html, body {
     align-items: center;
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 
-#video {
+#videoBox {
     align-self: center;
     height: 100%;
     width: 100%;
@@ -16,9 +17,19 @@ html, body {
     justify-content: space-between;
 }
 
-#text {
+video {
+    max-height: 100%;
+    max-width: 100%;
+    z-index: 2;
+    /* transition: height 2s; */
+    transition-property: height;
+    transition-duration: 2s;
+}
+
+#textBox {
     align-self: center;
     text-align: center;
+
     background-color: violet;
     padding: 5px;
     border-radius: 8px;
@@ -28,15 +39,35 @@ html, body {
 }
 
 #choiceBox {
+    position: fixed;
+    padding-top: 5px;
+    width: 100%;
+    bottom: 0px;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cacheChoiceBox {
+    position: fixed;
+    background-color: black;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    transition: background-color 1s;
 }
 
 .choice {
+    cursor: pointer;
+    width: 400px;
     margin-bottom: 5px;
-    padding-bottom: 2px;
-    padding-top: 2px;
-    background-color: hotpink;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    background-color: gainsboro;
     border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
 }
