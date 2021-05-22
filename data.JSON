@@ -300,21 +300,20 @@
             ]
         },
         "pKn_assurance": {
-            "type": "text",
-            "text": "Assurance",
+            "type": "video",
             "choices": [
                 {
-                    "label": "MENU PRINCIPAL",
-                    "sceneId": "pKn_menu_principal"
+                    "label": "Poser des questions",
+                    "sceneId": "pKn_menu_principal",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_menu_principal": {
-            "type": "text",
-            "text": "MENU PRINCIPAL",
+            "type": "menu video",
             "choices": [
                 {
-                    "label": "antécédents bertrand",
+                    "label": "Bernard Bertrand, un de vos anciens employés...",
                     "sceneId": "pKn_antecedents_bertrand",
                     "conditions": [
                         {
@@ -324,7 +323,7 @@
                     ]
                 },
                 {
-                    "label": "sport",
+                    "label": "Vous pratiquez une activité en dehors de vos heures de travail ?",
                     "sceneId": "pKn_sport",
                     "conditions": [
                         {
@@ -334,7 +333,7 @@
                     ]
                 },
                 {
-                    "label": "UTT",
+                    "label": "Vous connaissez l'UTT ?",
                     "sceneId": "pKn_utt",
                     "conditions": [
                         {
@@ -344,7 +343,7 @@
                     ]
                 },
                 {
-                    "label": "Alibi",
+                    "label": "Que faisiez-vous hier de midi à quatorze heure ?",
                     "sceneId": "pKn_alibi",
                     "conditions": [
                         {
@@ -354,11 +353,7 @@
                     ]
                 },
                 {
-                    "label": "Finir Interrogatoire",
-                    "sceneId": "pKn_finir_interrogatoire"
-                },
-                {
-                    "label": "clef",
+                    "label": "Montrer la clé trouvée à l'UTT",
                     "sceneId": "pKn_clef",
                     "conditions": [
                         {
@@ -366,63 +361,65 @@
                             "value": "pKn_clef"
                         }
                     ]
+                },
+                {
+                    "label": "Finir Interrogatoire",
+                    "sceneId": "pKn_finir_interrogatoire"
                 }
             ]
         },
         "pKn_antecedents_bertrand": {
-            "type": "text",
-            "text": "antécédents bertrand",
+            "type": "video",
             "choices": [
                 {
                     "label": "MENU PRINCIPAL",
-                    "sceneId": "pKn_menu_principal"
+                    "sceneId": "pKn_menu_principal",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_sport": {
-            "type": "text",
-            "text": "sport",
+            "type": "video",
             "choices": [
                 {
                     "label": "MENU PRINCIPAL",
-                    "sceneId": "pKn_menu_principal"
+                    "sceneId": "pKn_menu_principal",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_utt": {
-            "type": "text",
-            "text": "UTT",
+            "type": "video",
             "choices": [
                 {
                     "label": "MENU PRINCIPAL",
-                    "sceneId": "pKn_menu_principal"
+                    "sceneId": "pKn_menu_principal",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_alibi": {
-            "type": "text",
-            "text": "Alibi",
+            "type": "video",
             "choices": [
                 {
-                    "label": "Qu'avez-vous mangé",
+                    "label": "Qu'avez-vous mangé ?",
                     "sceneId": "pKn_qu_avez_vous_mange"
                 },
                 {
-                    "label": "ou étiez-vous ?",
+                    "label": "Où étiez-vous ?",
                     "sceneId": "pKn_ou_etiez_vous_"
                 },
                 {
-                    "label": "MENU PRINCIPAL",
+                    "label": "Poser d'autres questions",
                     "sceneId": "pKn_menu_principal"
                 }
             ]
         },
         "pKn_ou_etiez_vous_": {
-            "type": "text",
-            "text": "ou étiez-vous ?",
+            "type": "video",
             "choices": [
                 {
-                    "label": "les faits se sont déroulés",
+                    "label": "Le cambriolage a eu lieu à ce moment là...",
                     "sceneId": "pKn_les_faits_se_sont_deroules"
                 },
                 {
@@ -432,44 +429,25 @@
             ]
         },
         "pKn_qu_avez_vous_mange": {
-            "type": "text",
-            "text": "Qu'avez-vous mangé",
+            "type": "video",
             "choices": [
                 {
-                    "label": "les faits se sont déroulés",
+                    "label": "Le cambriolage a eu lieu à ce moment là...",
                     "sceneId": "pKn_les_faits_se_sont_deroules"
                 },
                 {
-                    "label": "MENU PRINCIPAL",
+                    "label": "Poser d'autres questions",
                     "sceneId": "pKn_menu_principal"
                 }
             ]
         },
         "pKn_les_faits_se_sont_deroules": {
-            "type": "text",
-            "text": "les faits se sont déroulés",
+            "type": "video",
             "choices": [
                 {
-                    "label": "MENU PRINCIPAL",
-                    "sceneId": "pKn_menu_principal"
-                }
-            ]
-        },
-        "pKn_finir_interrogatoire": {
-            "type": "text",
-            "text": "Finir Interrogatoire",
-            "choices": [
-                {
-                    "label": "~ Interroger Géraldine",
-                    "sceneId": "pKn_~_interroger_geraldine"
-                },
-                {
-                    "label": "~ Interroger Bertrand",
-                    "sceneId": "pKn_~_interroger_bertrand"
-                },
-                {
-                    "label": "~ FIN",
-                    "sceneId": "pKn_~_fin"
+                    "label": "Poser d'autres questions",
+                    "sceneId": "pKn_menu_principal",
+                    "autoChoice": true
                 }
             ]
         },
@@ -482,7 +460,7 @@
                     "conditions": [
                         {
                             "operator": "hasNotSeen",
-                            "value": "*self"
+                            "value": "*this"
                         }
                     ]
                 },
@@ -492,7 +470,7 @@
                     "conditions": [
                         {
                             "operator": "hasNotSeen",
-                            "value": "*self"
+                            "value": "*this"
                         }
                     ]
                 },
@@ -502,7 +480,7 @@
                     "conditions": [
                         {
                             "operator": "hasNotSeen",
-                            "value": "*self"
+                            "value": "*this"
                         }
                     ]
                 },
@@ -512,92 +490,131 @@
                     "conditions": [
                         {
                             "operator": "hasNotSeen",
-                            "value": "*self"
+                            "value": "*this"
                         }
                     ]
                 }
             ]
         },
         "pKn_clefs___menu": {
-            "type": "text",
-            "text": "Clefs - MENU",
+            "type": "menu video",
             "choices": [
                 {
-                    "label": "Femme",
-                    "sceneId": "pKn_femme",
-                    "conditions": [
-                        {
-                            "operator": "hasNotSeen",
-                            "value": "pKn_femme"
-                        }
-                    ]
-                },
-                {
-                    "label": "Mlle.Dupreux",
-                    "sceneId": "pKn_mlledupreux",
-                    "conditions": [
-                        {
-                            "operator": "hasNotSeen",
-                            "value": "pKn_mlledupreux"
-                        }
-                    ]
-                },
-                {
-                    "label": "M.goudran",
+                    "label": "Monsieur Goudran, c'est un de vos employés ?",
                     "sceneId": "pKn_mgoudran",
                     "conditions": [
                         {
                             "operator": "hasNotSeen",
-                            "value": "pKn_mgoudran"
+                            "value": "*this"
                         }
                     ]
                 },
                 {
-                    "label": "FIN clef suite",
-                    "sceneId": "pKn_fin_clef_suite"
+                    "label": "Mademoiselle Dupreux est une de vos employés ?",
+                    "sceneId": "pKn_mlledupreux",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Parlez moi de votre femme...",
+                    "sceneId": "pKn_femme",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Poser d'autres questions",
+                    "sceneId": "pKn_fin_clef_suite",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
                 }
             ]
         },
         "pKn_mgoudran": {
-            "type": "text",
-            "text": "M.goudran",
+            "type": "video",
             "choices": [
                 {
                     "label": "Clefs - MENU",
-                    "sceneId": "pKn_clefs___menu"
+                    "sceneId": "pKn_clefs___menu",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_femme": {
-            "type": "text",
-            "text": "Femme",
+            "type": "video",
             "choices": [
                 {
                     "label": "Clefs - MENU",
-                    "sceneId": "pKn_clefs___menu"
+                    "sceneId": "pKn_clefs___menu",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_mlledupreux": {
-            "type": "text",
-            "text": "Mlle.Dupreux",
+            "type": "video",
             "choices": [
                 {
                     "label": "Clefs - MENU",
-                    "sceneId": "pKn_clefs___menu"
+                    "sceneId": "pKn_clefs___menu",
+                    "autoChoice": true
                 }
             ]
         },
         "pKn_fin_clef_suite": {
-            "type": "text",
-            "text": "FIN clef suite",
+            "type": "video",
             "choices": [
                 {
+                    "label":"Interroger sur l'assurance de la boulangerie",
+                    "sceneId": "pKn_assurance",
+                    "autoChoice": true,
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*self"
+                        }
+                    ]
+                },
+                {
                     "label": "MENU PRINCIPAL",
-                    "sceneId": "pKn_menu_principal"
+                    "sceneId": "pKn_menu_principal",
+                    "autoChoice": true,
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "pKn_assurance"
+                        }
+                    ]
                 }
             ]
-        }
+        },
+                                            "pKn_finir_interrogatoire": {
+                                                "type": "video",
+                                                "choices": [
+                                                    {
+                                                        "label": "~ Interroger Géraldine",
+                                                        "sceneId": "pKn_~_interroger_geraldine"
+                                                    },
+                                                    {
+                                                        "label": "~ Interroger Bertrand",
+                                                        "sceneId": "pKn_~_interroger_bertrand"
+                                                    },
+                                                    {
+                                                        "label": "~ FIN",
+                                                        "sceneId": "pKn_~_fin"
+                                                    }
+                                                ]
+                                            }
         
     }
 }
