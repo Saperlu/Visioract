@@ -5,6 +5,8 @@ let clockBox = document.getElementById("clockBox");
 let choiceBox = document.getElementById("choiceBox");
 let videoBox = document.getElementById("videoBox");
 let textBox = document.getElementById("textBox");
+let pointAndClickBox = document.getElementById("pointAndClickBox");
+
 let timeLeft = new Date(2000, 0, 1, 0, 20);
 let timeEnd = new Date(2000, 0, 1);
 let isTimeToSet = false;
@@ -104,6 +106,35 @@ function setupScene(sceneId) {
                 }
                 videoBox.insertBefore(video, choiceBox);
             break;
+            case "point and click":
+                let req = new XMLHttpRequest();
+                req.open('GET', `ressources/dossier/avecbadge.html`);
+                req.send();
+                req.onreadystatechange = async () => {
+                    if (req.readyState === 4 && req.status === 200) {
+                        videoBox.style.display = "none";
+                        pointAndClickBox.style.display = "flex";
+                        html = req.response;
+                        pointAndClickBox.innerHTML = html;
+                        image= document.getElementById("imagePointAndClick");
+                        matches = html.match(new RegExp(/\d+,\d+/,"g"))
+                        await sleep(500);
+                        ratioX = scene.width/image.clientWidth;
+                        ratioY = scene.height/image.clientHeight;
+                        // TODO ratio
+                        matches.map(m => {
+                            x = m.match(/\d+/)[0];
+                            y= m.match(/,\d+/)[0].slice(1);
+                            x=Number.parseInt(x/ratioX);
+                            y=Number.parseInt(y/ratioY);
+                            html=html.replace(m, `${x},${y}`)
+                        });
+                        pointAndClickBox.innerHTML = html;
+                    }
+                }
+
+
+                break;
         default: 
             console.error(scene.type);
             break;
@@ -147,6 +178,10 @@ function clearSetup() {
             break;
         case "menu video":
             videoBox.removeChild(document.getElementsByTagName("video")[0]);
+            break;
+        case "point and click":
+            pointAndClickBox.style.display = "none";
+            videoBox.style.display = "flex";
             break;
         default:
             break;
@@ -252,4 +287,19 @@ function getDizaines (n) {
 
 function getUnites (n) {
     return n%10;
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+ }
+
+function setClickableAreas() {
+    document.getElementById("pochette B").onclick = () => {
+        console.log("pochette B");
+    }
+}
+
+function oui(chaine) {
+    console.log(chaine);
+
 }
