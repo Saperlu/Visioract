@@ -1,0 +1,61 @@
+{
+	// Place your snippets for json here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+
+	"video choice": {
+		"prefix": "vid",
+		"body": [
+			"\"$1\": {,",
+			"\"type\": \"video\",",
+            "\"choices\": [",
+            "\t\t{",
+            "\t\t\t\"label\": \"$3\",",
+            "\t\t\t\"sceneId\": \"$4\"",
+            "\t\t}",
+            "]",
+        	"}"
+		],
+		"description": "video 1 choice"
+	},
+	"conditions": {
+		"prefix": "cond",
+		"body": [
+			"\"conditions\": [",
+			"\t$1",
+			"]"
+		]
+	},
+
+
+	"hasSeen Condition": {
+		"prefix": "hass",
+		"body": [
+			"{",
+			"\t\"operator\": \"hasSeen\",",
+			"\t\"value\": \"${1:*self}\"",
+			"}"
+		],
+	},
+	"hasNotSeen Condition": {
+		"prefix": "hasn",
+		"body": [
+			"{",
+			"\t\"operator\": \"hasNotSeen\",",
+			"\t\"value\": \"${1:*self}\"",
+			"}"
+		],
+	}
+	
+}
