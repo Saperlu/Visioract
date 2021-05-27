@@ -6,10 +6,14 @@ let choiceBox = document.getElementById("choiceBox");
 let videoBox = document.getElementById("videoBox");
 let textBox = document.getElementById("textBox");
 let pointAndClickBox = document.getElementById("pointAndClickBox");
+let pieceBox = document.getElementById("pieceBox");
+
 
 let timeLeft = new Date(2000, 0, 1, 0, 20);
 let timeEnd = new Date(2000, 0, 1);
 let isTimeToSet = false;
+
+let scene;
 let previousSceneId = "";
 let currentSceneId = "";
 let currentSceneType;
@@ -108,7 +112,7 @@ function setupScene(sceneId) {
             break;
             case "point and click":
                 let req = new XMLHttpRequest();
-                req.open('GET', `ressources/dossier/avecbadge.html`);
+                req.open('GET', `ressources/dossier/${sceneId}.html`);
                 req.send();
                 req.onreadystatechange = async () => {
                     if (req.readyState === 4 && req.status === 200) {
@@ -293,13 +297,4 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
  }
 
-function setClickableAreas() {
-    document.getElementById("pochette B").onclick = () => {
-        console.log("pochette B");
-    }
-}
 
-function oui(chaine) {
-    console.log(chaine);
-
-}
