@@ -6,7 +6,6 @@ let choiceBox = document.getElementById("choiceBox");
 let videoBox = document.getElementById("videoBox");
 let textBox = document.getElementById("textBox");
 let pointAndClickBox = document.getElementById("pointAndClickBox");
-let pieceBox = document.getElementById("pieceBox");
 
 
 let timeLeft = new Date(2000, 0, 1, 0, 20);
@@ -36,7 +35,7 @@ function handleChoice(sceneId) {
     setupScene(sceneId);
 }
 
-function setupScene(sceneId) {
+async function setupScene(sceneId) {
     // TODO : Remove this
     if (sceneId === "pKn_debut") {
         seenScenes = {};
@@ -46,7 +45,7 @@ function setupScene(sceneId) {
     clearNode(choiceBox);
     scene = data.scenes[sceneId];
     seenScenes[sceneId] = scene; // Put in seenScenes object;
-    clearSetup();
+    await clearSetup();
     currentSceneId = sceneId;
     currentSceneType = scene.type;
     if (scene.time || scene.time === 0)
@@ -117,15 +116,16 @@ function setupScene(sceneId) {
                 req.onreadystatechange = async () => {
                     if (req.readyState === 4 && req.status === 200) {
                         videoBox.style.display = "none";
-                        pointAndClickBox.style.display = "flex";
+                        pointAndClickBox.style.display = "inline";
                         html = req.response;
                         pointAndClickBox.innerHTML = html;
                         image= document.getElementById("imagePointAndClick");
                         matches = html.match(new RegExp(/\d+,\d+/,"g"))
                         await sleep(500);
+
+                        // Adapt click zones
                         ratioX = scene.width/image.clientWidth;
                         ratioY = scene.height/image.clientHeight;
-                        // TODO ratio
                         matches.map(m => {
                             x = m.match(/\d+/)[0];
                             y= m.match(/,\d+/)[0].slice(1);
@@ -134,6 +134,8 @@ function setupScene(sceneId) {
                             html=html.replace(m, `${x},${y}`)
                         });
                         pointAndClickBox.innerHTML = html;
+                        pointAndClickBox.style.opacity = 1;
+
                     }
                 }
 
@@ -145,7 +147,6 @@ function setupScene(sceneId) {
     }
 
     // ChoiceBox
-    // TODO : wait for the end of video
     scene.choices.forEach(choice => {
         const isChoiceToPrint = choice.conditions ? checkConditions(choice.sceneId, choice.conditions) : true;
         if (isChoiceToPrint) {
@@ -167,7 +168,7 @@ function setupScene(sceneId) {
 }
 
 
-function clearSetup() {
+async function clearSetup() {
     clockBox.className = "";
     choiceBox.style.display = "none";
     choiceBox.style.transitionProperty = "none";
@@ -184,8 +185,14 @@ function clearSetup() {
             videoBox.removeChild(document.getElementsByTagName("video")[0]);
             break;
         case "point and click":
-            pointAndClickBox.style.display = "none";
-            videoBox.style.display = "flex";
+            pointAndClickBox.style.opacity = 0;
+            pointAndClickBox.ontransitionend = () => {
+                pointAndClickBox.style.display = "none";
+                clearNode(pointAndClickBox);
+                videoBox.style.display = "flex";
+                pointAndClickBox.ontransitionend = null;
+            }
+            await sleep(500);
             break;
         default:
             break;

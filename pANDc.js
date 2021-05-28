@@ -4,9 +4,6 @@ function clickPortefeuilleBertrand() {
 function clickPochetteB() {
     printMenu("pochette Bertrand");
 }
-function clickPochetteB() {
-    printMenu("pochette Bertrand");
-}
 function clickPochetteG() {
     printMenu("pochette Géraldine");
 }
@@ -14,15 +11,16 @@ function clickPochetteBleue() {
     printMenu("pochette bleue");
 }
 function clickBadge() {
-    printMenu("pochette Badge");
+    printMenu("badge");
 }
 
 function printMenu(itemId) {
-    pieceBox = document.getElementById("pieceBox");
-    pieceBox.style.display = "flex";
+    menu = document.getElementById("pieceMenuBox");
+    clearNode(menu);
+    menu.style.display = "flex";
     setTimeout(() => {
-        pieceBox.style.opacity = 1;
-    }, 500);
+        menu.style.opacity = 1;
+    }, 50);
     // Image
     image = document.getElementById("imagePointAndClick");
     image.style.filter = "blur(10px)";
@@ -35,54 +33,74 @@ function printMenu(itemId) {
         let div = document.createElement("div");
         div.className = "choice";
         div.textContent = piece.label;
-        div.onclick = handlePiece.bind(null, piece);
-        pieceBox.appendChild(div);
+        div.onclick = handlePiece.bind(null, piece, itemId);
+        menu.appendChild(div);
     });
 }
 
-function handlePiece(piece) {
+function handlePiece(piece, itemId) {
+    hideMenu();
     switch (piece.type) {
         case "feuille":
             // Print feuille
-            pieceBox.style.opacity = 0;
-            pieceBox.ontransitionend = () => {
-                pieceBox.style.display = "none";
-                pieceBox.ontransitionend = null;
-
-            };
-            let div = document.createElement("div");
-            div.className = "piece";
+            let feuille = document.createElement("div");
+            feuille.className = "feuille";
             let h = document.createElement("h3");
             h.textContent = piece.titre;
             let p = document.createElement("p");
-            p.textContent = piece.texte;
-            div.appendChild(h);
-            div.appendChild(p);
-            pointAndClickBox.appendChild(div);
+            p.innerHTML = piece.texte;
+            feuille.appendChild(h);
+            feuille.appendChild(p);
+            pointAndClickBox.appendChild(feuille);
+            setTimeout(() => {
+                feuille.style.opacity = 1;
+            }, 50);
 
-            image.onclick = () => {
-                pointAndClickBox.removeChild(pointAndClickBox.getElementsByClassName("piece"));
-                image.onclik = clickMenuToImage;
-            }
+            // To menu
+            image.onclick = clickPieceToMenu.bind(null, feuille, itemId);
             break;
-        case "photo":
-
+        case "image":
+            let img = document.createElement("img");
+            img.className = "img";
+            img.src = `ressources/images/${piece.fileName}`;
+            pointAndClickBox.appendChild(img);
+            setTimeout(() => {
+                img.style.opacity = 1;
+            }, 50);
+            // To menu
+            image.onclick = clickPieceToMenu.bind(null, img, itemId);
             break;
-        default:
+        case "scene":
+            handleChoice(piece.sceneId);
+            default:
             break;
     }
 }
 
 function clickMenuToImage() {
-    pieceBox = document.getElementById("pieceBox");
+    menu = document.getElementById("pieceMenuBox");
     image = document.getElementById("imagePointAndClick");
-    // Remove menu
-    pieceBox.style.opacity = 0;
-    pieceBox.ontransitionend = () => {
-        clearNode(pieceBox);
-        pieceBox.ontransitionend = null;
-    }
+    // Hide menu
+    hideMenu();
     // Prints image back
     image.style.filter = "blur(0px)";
     image.useMap = "#map";
+}
+
+function clickPieceToMenu(pieceElement, itemId) {
+    pieceElement.style.opacity = 0;
+    printMenu(itemId)
+    image.onclik = clickMenuToImage;
+    pieceElement.ontransitionend = () => {
+        pointAndClickBox.removeChild(pieceElement);
+    }
+}
+
+function hideMenu() {
+    menu = document.getElementById("pieceMenuBox");
+    menu.style.opacity = 0;
+    menu.ontransitionend = () => {
+        menu.style.display = "none";
+        menu.ontransitionend = null;
+    };
 }

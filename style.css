@@ -80,7 +80,7 @@ video {
     transition: background-color 0.5s;
 }
 
-.choice, .piece {
+.choice {
     cursor: pointer;
     width: 400px;
     margin-bottom: 5px;
@@ -146,20 +146,28 @@ video {
 }
 
 #pointAndClickBox {
-    display: flex;
+    display: inline;
     flex-direction: column;
     max-width: 100%;
     max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 #imagePointAndClick {
+    position: fixed;
+    left: 100%;
     max-height: 100%;
     max-width: 100%;
-    transition: filter 2s;
+    transition: filter 1s;
     filter: blur(0px);
 }
 
-#pieceBox {
+map {
+    height: 0;
+}
+
+#pieceMenuBox {
     display: none;
     position: fixed;
     padding-top: 5px;
@@ -169,16 +177,46 @@ video {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+
     
     opacity: 0;
-    transition: 1s;
+    transition: 0.5s;
     transition-property: opacity;
 }
 
-.piece h3 {
+.feuille {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 4px;
+    border: black solid 2px;
+    font-family: initial;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
+.img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 4px;
+    border: black solid 2px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    
+}
+
+.piece h3 {
+    text-align: center;
 }
 
 .piece p {
-    
+    text-align: justify;
 }
