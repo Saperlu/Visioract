@@ -44,7 +44,7 @@
 		"body": [
 			"{",
 			"\t\"operator\": \"hasSeen\",",
-			"\t\"value\": \"${1:*self}\"",
+			"\t\"value\": \"${1:*this}\"",
 			"}"
 		],
 	},
@@ -53,7 +53,7 @@
 		"body": [
 			"{",
 			"\t\"operator\": \"hasNotSeen\",",
-			"\t\"value\": \"${1:*self}\"",
+			"\t\"value\": \"${1:*this}\"",
 			"}"
 		],
 	}
