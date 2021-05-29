@@ -633,7 +633,7 @@
             ]
         },      
         "pBn_menu": {
-            "type": "menu vide",
+            "type": "menu video",
             "choices": [
                 {
                     "label": "Quel est votre alibi ?",
