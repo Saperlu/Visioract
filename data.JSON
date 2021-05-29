@@ -1,5 +1,5 @@
 {
-    "entryPoint" : "",
+    "entryPoint" : "debug",
     "scenes": {
         "exemple": {
             "type": "text",
@@ -18,7 +18,7 @@
                 }
             ]
         },
-        "p1n_debut": {
+        "debug": {
             "type": "text",
             "text": "Première scène",
             "ressource": "",

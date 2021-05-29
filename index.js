@@ -35,5 +35,5 @@ loadData(val => {
     // }
 
 
-    setupScene("p1n_debut");
+    setupScene(data.entryPoint);
 });
