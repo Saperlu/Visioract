@@ -29,8 +29,25 @@
                 },
                 {
                     "label": "Interrogatoire Karl",
-                    "sceneId": "p3n_interrogatoire_karl"
+                    "sceneId": "pKn_karl_debut"
+                },
+                {
+                    "label": "Interrogatoire Géraldine",
+                    "sceneId": "pGn_debut"
+                },
+                {
+                    "label": "Interrogatoire Bertrand",
+                    "sceneId": "pBn_debut"
+                },
+                {
+                    "label": "Accusuer un suspect",
+                    "sceneId": "p5n_faire_choix_accusation"
+                },
+                {
+                    "label": "Débuter",
+                    "sceneId": "p1n_debut"
                 }
+                
             ]
         },
         "p1n_documentation_avec_badge": {
@@ -69,7 +86,7 @@
             "choices": [
                 {
                     "label": "Interrogatoire Karl",
-                    "sceneId": "p3n_interrogatoire_karl"
+                    "sceneId": "pKn_karl_debut"
                 }
             ]
         },
@@ -79,7 +96,7 @@
 
 
 
-        "p3n_interrogatoire_karl": {
+        "pKn_karl_debut": {
             "type": "video",
             "choices": [
                 {
@@ -379,7 +396,7 @@
                     "conditions": [
                         {
                             "operator": "hasNotSeen",
-                            "value": "*self"
+                            "value": "*this"
                         }
                     ]
                 },
@@ -396,6 +413,7 @@
                 }
             ]
         },
+        
                                             "pKn_finir_interrogatoire": {
                                                 "type": "video",
                                                 "choices": [
@@ -412,7 +430,722 @@
                                                         "sceneId": "pKn_~_fin"
                                                     }
                                                 ]
-                                            }
+                                            },
+        "pGn_debut": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Menu",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_menu": {
+            "type": "menu video",
+            "choices": [
+                {
+                    "label": "En quoi consiste votre métier exactement ?",
+                    "sceneId": "pGn_en_quoi_consiste_votre_metier_exactement_",
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "pGn_le_mail_menacant"
+                        },
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Vous êtes fière de ce mail ?",
+                    "sceneId": "pGn_vous_êtes_fiere_de_ce_mail_",
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "pGn_le_mail_menacant"
+                        },
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Quel est votre alibi ?",
+                    "sceneId": "pGn_alibi_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Le grand ponte ?",
+                    "sceneId": "pGn_le_grand_ponte_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "pGn_alibi_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Vous avez des preuves ?",
+                    "sceneId": "pGn_vous_avez_des_preuves_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "pGn_alibi_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Montrer la clef trouvée dans le carton",
+                    "sceneId": "pGn_clef_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+               
+                {
+                    "label": "Ce mail menaçant que vous avez envoyé...",
+                    "sceneId": "pGn_le_mail_menacant",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+
+                {
+                    "label": "Fin de l’interrogatoire",
+                    "sceneId": "pGn_fin_de_l’interrogatoire"
+                }
+            ]
+        },
+        "pGn_le_mail_menacant": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_alibi_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_clef_": {
+            "type": "video",
+            "choices": [ 
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_en_quoi_consiste_votre_metier_exactement_": {
+            "type": "video",
+            "choices": [ 
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_vous_êtes_fiere_de_ce_mail_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_le_grand_ponte_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pGn_vous_avez_des_preuves_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pGn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+                    "pGn_fin_de_l’interrogatoire": {
+                        "type": "video",
+                        "choices": [
+                            {
+                                "label": "~ Interrogatoire Bertrand",
+                                "sceneId": "pGn_~_interrogatoire_bertrand"
+                            },
+                            {
+                                "label": "~ FIN",
+                                "sceneId": "pGn_~_fin"
+                            }
+                        ]
+                    },
         
+        "pBn_debut": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Menu",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },      
+        "pBn_menu": {
+            "type": "menu video",
+            "choices": [
+                {
+                    "label": "Quel est votre alibi ?",
+                    "sceneId": "pBn_alibi_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Vous vous êtes fait licencié donc...",
+                    "sceneId": "pBn_licenciement",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Votre jean est tâché...",
+                    "sceneId": "pBn_votre_jean",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Montrer les clefs",
+                    "sceneId": "pBn_clef_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Déverouiller le téléphone",
+                    "sceneId": "pBn_deverouiller_le_telephone",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "pBn_alibi_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Vous connaissez l'UTT ?",
+                    "sceneId": "pBn_utt_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "pBn_clef_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Fin de l'interrogatoire",
+                    "sceneId": "pBn_fin"
+                }
+            ]
+        },
+        "pBn_alibi_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pBn_deverouiller_le_telephone": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pBn_licenciement": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pBn_votre_jean": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pBn_clef_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+        "pBn_utt_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "pBn_menu",
+                    "autoChoice": true
+                }
+            ]
+        },
+                            "pBn_fin": {
+                                "type": "video",
+                                "choices": [
+                                    {
+                                        "label": "~ Interrogatoire Géraldine",
+                                        "sceneId": "pBn_~_interrogatoire_geraldine"
+                                    },
+                                    {
+                                        "label": "~ Fin",
+                                        "sceneId": "pBn_~_fin"
+                                    }
+                                ]
+                                },
+        "p5n_faire_choix_accusation": {
+            "type": "menu video",
+            "choices": [
+                {
+                    "label": "Accuser Bertrand",
+                    "sceneId": "p5n_accuser_bertrand"
+                },
+                {
+                    "label": "Accuser Géraldine",
+                    "sceneId": "p5n_accuser_geraldine"
+                },
+                {
+                    "label": "Accuser Karl",
+                    "sceneId": "p5n_accuser_karl"
+                }
+            ]
+        },
+        "p5n_accuser_bertrand": {
+            "type": "video"
+        }, 
+        "p5n_accuser_geraldine": {
+            "type": "video"
+        }, 
+        "p5n_accuser_karl": {
+            "type": "video"
+        },
+        "p1n_debut": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Des suspects potentiels ?",
+                    "sceneId": "p1n_des_suspects_potentiels_"
+                },
+                {
+                    "label": "Le moyen de transport utilisé ?",
+                    "sceneId": "p1n_le_moyen_de_transport_utilise_"
+                }
+            ]
+        },
+        "p1n_des_suspects_potentiels_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Mais oui, c’est ça, évidemment !",
+                    "sceneId": "p1n_mais_oui_c’est_ca_evidemment_"
+                },
+                {
+                    "label": "Ne posons pas de conclusions hâtives...",
+                    "sceneId": "p1n_ne_posons_pas_de_conclusions_hâtives"
+                }
+            ]
+        },
+        "p1n_le_moyen_de_transport_utilise_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Mais oui, c’est ça, évidemment !",
+                    "sceneId": "p1n_mais_oui_c’est_ca_evidemment_"
+                },
+                {
+                    "label": "Ne posons pas de conclusions hâtives...",
+                    "sceneId": "p1n_ne_posons_pas_de_conclusions_hâtives"
+                }
+            ]
+        },
+        "p1n_mais_oui_c’est_ca_evidemment_": {
+            "type": "video"
+        },
+        "p1n_ne_posons_pas_de_conclusions_hâtives": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Documentation",
+                    "sceneId": "p1n_documentation",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_j’ai_le_badge": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Menu",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_j’ai_pas_le_badge": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Menu",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_menu": {
+            "type": "menu video",
+            "choices": [
+                {
+                    "label": "Aviez-vous déjà eu des dons comme ça par le passé ?",
+                    "sceneId": "p2n_aviez_vous_deja_eu_des_dons_comme_ca_par_le_passe_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                {
+                    "label": "Comment avez-vous découvert cette livraison ?",
+                    "sceneId": "p2n_comment_avez_vous_decouvert_cette_livraison_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                },
+                
+                {
+                    "label": "Qui est votre fournisseur de viennoiserie habituel ?",
+                    "sceneId": "p2n_qui_est_votre_fournisseur_de_viennoiserie_habituel_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_aviez_vous_deja_eu_des_dons_comme_ca_par_le_passe_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Je peux voir le carton ?",
+                    "sceneId": "p2n_je_peux_voir_la_carton",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_qu’avez_vous_fait_quand_vous_avez_trouve_ce_carton_du_coup_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Vous savez qui aurait pu être le généreux donateur anonyme ?",
+                    "sceneId": "p2n_vous_savez_qui_aurait_pu_être_le_genereux_donateur_anonyme_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_comment_avez_vous_decouvert_cette_livraison_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Qu’avez-vous fait quand vous avez trouvé ce carton du coup ?",
+                    "sceneId": "p2n_qu’avez_vous_fait_quand_vous_avez_trouve_ce_carton_du_coup_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_comment_avez_vous_decouvert_cette_livraison_"
+                        }
+                    
+                    ]
+                },
+                {
+                    "label": "Vous avez trouvé quelque chose dans le carton ?",
+                    "sceneId": "p2n_vous_avez_trouve_quelque_chose_dans_le_carton_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_vous_avez_trouve_quelque_chose_dans_le_carton_"
+                        }
+                    ]
+                },
+                {
+                    "label": "Vous avez goûté les viennoiseries ?",
+                    "sceneId": "p2n_vous_avez_goûte_les_viennoiseries_",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        },
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_je_peux_voir_la_carton"
+                        }
+                    ]
+                },
+                {
+                    "label": "Finir l'interrogatoire",
+                    "sceneId": "p2n_finir_l_interrogatoire",
+                    "conditions": [
+                        {
+                            "operator": "hasNotSeen",
+                            "value": "*this"
+                        }
+                    ]
+                }
+            ]
+        },
+        "p2n_aviez_vous_deja_eu_des_dons_comme_ca_par_le_passe_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_qui_est_votre_fournisseur_de_viennoiserie_habituel_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_vous_avez_trouve_quelque_chose_dans_le_carton_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_qu’avez_vous_fait_quand_vous_avez_trouve_ce_carton_du_coup_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+                
+            ]
+        },
+        "p2n_comment_avez_vous_decouvert_cette_livraison_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+                
+            ]
+        },
+        "p2n_vous_savez_qui_aurait_pu_être_le_genereux_donateur_anonyme_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_je_peux_voir_la_carton": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_vous_avez_goûte_les_viennoiseries_": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "MENU",
+                    "sceneId": "p2n_menu",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_finir_l_interrogatoire": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Suspicion",
+                    "sceneId": "p2n_si_badge",
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_j’ai_le_badge"
+                        }
+                    ]
+                },
+                {
+                    "label": "Suspicion",
+                    "sceneId": "p2n_si_pas_badge",
+                    "conditions": [
+                        {
+                            "operator": "hasSeen",
+                            "value": "p2n_j’ai_pas_le_badge"
+                        }
+                    ]
+                },
+                {
+                    "label": "Pas de suspicion",
+                    "sceneId": "p2n_pas_de_suspicion"
+                }
+            ]
+        },
+        "p2n_pas_de_suspicion": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Karl début",
+                    "sceneId": "pKn_karl_debut",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_si_badge": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Karl début",
+                    "sceneId": "pKn_karl_debut",
+                    "autoChoice" : true
+                }
+            ]
+        },
+        "p2n_si_pas_badge": {
+            "type": "video",
+            "choices": [
+                {
+                    "label": "Karl début",
+                    "sceneId": "pKn_karl_debut",
+                    "autoChoice" : true
+                }
+            ]
+        }
+      
+
+
+       
+    
     }
 }
