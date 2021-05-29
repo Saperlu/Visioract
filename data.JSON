@@ -20,7 +20,17 @@
             "type": "point and click",
             "width": 5988,
             "height": 2954,
+            "nextScene": {
+                "sceneId": "p3n_interroger_les_suspects",
+                "label": "Arrêter de regarder le bureau"
+            },  
             "clicks": {
+                "portefeuille Bertrand": [
+
+                ],
+                "portefeuille Geraldine": [
+
+                ],
                 "pochette Bertrand": [
                     {
                         "label": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
@@ -39,14 +49,64 @@
                         "type": "image",
                         "fileName": "pochette_bertrand_chocolatine.png"
                     }
+                    
+                ],
+                "pochette Géraldine": [
+
+                ],
+                "pochette bleue": [
 
                 ],
                 "badge": [
                     {
                         "label": "Prendre le badge",
                         "type": "scene",
-                        "sceneId": "p1n_documentation_avec_badge"
+                        "sceneId": "p1n_documentation_sans_badge"
                     }
+                ]
+            },
+            "choices": []
+        },
+        "p1n_documentation_sans_badge": {
+            "type": "point and click",
+            "width": 5988,
+            "height": 2954,
+            "nextScene": {
+                "sceneId": "p3n_interroger_les_suspects",
+                "label": "Arrêter de regarder le bureau"
+            },  
+            "clicks": {
+                "portefeuille Bertrand": [
+
+                ],
+                "portefeuille Geraldine": [
+
+                ],
+                "pochette Bertrand": [
+                    {
+                        "label": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
+                        "type": "feuille",
+                        "titre": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
+                        "texte": "Bernard Bertrand a été licencié le 9 mars 2021 conformément à toutes les lois en rigueurs.<br/><br/>Il était employé à la boulangerie Ganne Freddy à Rosières-près-Troyes depuis 2 ans. C’était son 1er emploi après l’obtention de son CAP pâtisserie en 2019.\nMotif du licenciement : son employeur Marc Karl, propriétaire et gérant de la boulangerie Ganne Freddy, a licencié M. Bertrand suite à de nombreuses réprimandes sur son manque de ponctualité. Les retards « commençaient à se faire récurrents » et « gênaient considérablement le bon fonctionnement de l’entreprise » selon son employeur.<br/><br/>M. Karl estime qu’en 2 années, M. Bertrand a cumulé plus d’une centaine d’heures de retards.<br/><br/>L’employé plaide pour sa défense des problèmes de réveils et des difficultés à se lever le matin. Ses arguments n’ont pas été retenus."
+                    },
+                    {
+                        "label": "Rapport de l’interrogatoire du 17/06/21 de Bernard Bertrand par l’enquêteur Khoury",
+                        "type": "feuille",
+                        "titre": "Rapport de l’interrogatoire du 17/06/21 de Bernard Bertrand par l’enquêteur Khoury",
+                        "texte": "Bernard Bertrand est très calme et bienveillant. Cependant, il éprouve un mépris profond pour son ex-employeur M. Karl.<br/><br/>Il plaide qu’il souhaite simplement que sa plainte du 13 mars soit entendue et qu’il ne résout aucun de ses problèmes par des confrontations violentes ou des provocations.<br/><br/>Alibis : livraisons Deliveroo sur ce créneau horaire"
+                    },
+                    {
+                        "label": "Photo",
+                        "type": "image",
+                        "fileName": "pochette_bertrand_chocolatine.png"
+                    }
+                    
+                ],
+                "pochette Géraldine": [
+
+                ],
+                "pochette bleue": [
+
                 ]
             },
             "choices": []

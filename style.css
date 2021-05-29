@@ -82,7 +82,7 @@ video {
 
 .choice {
     cursor: pointer;
-    width: 400px;
+    width: 30%;
     margin-bottom: 5px;
     padding: 4px;
     background-color: gainsboro;
@@ -156,7 +156,9 @@ video {
 
 #imagePointAndClick {
     position: fixed;
-    left: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-height: 100%;
     max-width: 100%;
     transition: filter 1s;
@@ -170,9 +172,11 @@ map {
 #pieceMenuBox {
     display: none;
     position: fixed;
-    padding-top: 5px;
     width: 100%;
+    left: 50%;
     bottom: 0px;
+    transform: translate(-50%, 0);
+    padding-top: 5px;
     text-align: center;
     flex-direction: column;
     margin-left: auto;
@@ -219,4 +223,16 @@ map {
 
 .piece p {
     text-align: justify;
+}
+
+#nextSceneButton {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    padding: 4px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: black solid 3px;   
 }

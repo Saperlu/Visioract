@@ -1,6 +1,9 @@
 function clickPortefeuilleBertrand() {
     printMenu("portefeuille Bertrand");
 }
+function clickPortefeuilleGeraldine() {
+    printMenu("portefeuille Geraldine");
+}
 function clickPochetteB() {
     printMenu("pochette Bertrand");
 }

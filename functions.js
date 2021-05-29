@@ -111,7 +111,7 @@ async function setupScene(sceneId) {
             break;
             case "point and click":
                 let req = new XMLHttpRequest();
-                req.open('GET', `ressources/dossier/${sceneId}.html`);
+                req.open('GET', `ressources/html/${sceneId}.html`);
                 req.send();
                 req.onreadystatechange = async () => {
                     if (req.readyState === 4 && req.status === 200) {
@@ -134,6 +134,14 @@ async function setupScene(sceneId) {
                             html=html.replace(m, `${x},${y}`)
                         });
                         pointAndClickBox.innerHTML = html;
+
+                        // Next scene button
+                        but = document.createElement("div");
+                        but.id="nextSceneButton";
+                        but.onclick = handleChoice.bind(null, scene.nextScene.sceneId);
+                        but.textContent = scene.nextScene.label;
+                        pointAndClickBox.appendChild(but);
+
                         pointAndClickBox.style.opacity = 1;
 
                     }
@@ -192,7 +200,7 @@ async function clearSetup() {
                 videoBox.style.display = "flex";
                 pointAndClickBox.ontransitionend = null;
             }
-            await sleep(500);
+            await sleep(1000);
             break;
         default:
             break;
