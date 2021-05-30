@@ -492,6 +492,9 @@
                                             },
         "pGn_debut": {
             "type": "video",
+            "time": 5,
+            "timeDisplayed": [0, 33.297],
+            "timeNotDisplayed": [9.20],
             "choices": [
                 {
                     "label": "Menu",
@@ -683,6 +686,9 @@
         
         "pBn_debut": {
             "type": "video",
+            "time": 6,
+            "timeDisplayed": [0,33.912],
+            "timeNotDisplayed": [8.74],
             "choices": [
                 {
                     "label": "Menu",
