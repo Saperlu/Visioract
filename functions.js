@@ -48,8 +48,6 @@ async function setupScene(sceneId) {
     await clearSetup();
     currentSceneId = sceneId;
     currentSceneType = scene.type;
-    if (scene.time || scene.time === 0)
-        clockBox.className = "displayed";
     // Content
     switch (scene.type) {
         case "text": 
@@ -63,6 +61,57 @@ async function setupScene(sceneId) {
             break;
             case "video":
                 video = document.createElement("video");
+                if (scene.time !== undefined && (scene.timeDisplayed || scene.timeNotDisplayed)) {
+                    video.ontimeupdate = (e) => {
+                        vTime=video.currentTime;
+                        let notDisplayedTs = -1;
+                        let displayedTs = -1;
+                        let displayedAnimatedBeginTs = -1;
+                        let displayedAnimatedEndTs = -1;
+                        if (scene.timeDisplayed)
+                            scene.timeDisplayed.forEach(v => {
+                                if (v <= vTime) {
+                                    displayedTs = v; 
+                                }
+                            });
+                        if (scene.timeNotDisplayed)
+                            scene.timeNotDisplayed.forEach(v => {
+                                if (v <= vTime) {
+                                    notDisplayedTs = v;   
+                                }
+                            });
+                        if (scene.timeDisplayedAnimatedBegin)
+                            scene.timeDisplayedAnimatedBegin.forEach(v => {
+                                if (v <= vTime) {
+                                    displayedAnimatedBeginTs = v;   
+                                }
+                            });
+                        if (scene.timeDisplayedAnimatedEnd)
+                            scene.timeDisplayedAnimatedEnd.forEach(v => {
+                                if (v <= vTime) {
+                                    displayedAnimatedEndTs = v;   
+                                }
+                            });
+                        switch (Math.max(displayedTs, notDisplayedTs, displayedAnimatedBeginTs, displayedAnimatedEndTs)) {
+                            case displayedTs:
+                                clockBox.className = "displayed";
+                                break;
+                            case notDisplayedTs:
+                                clockBox.className = "";
+                                break;
+                            case displayedAnimatedBeginTs:
+                                clockBox.className = "displayed animatedBegin";
+                                break;
+                            case displayedAnimatedEndTs:
+                                clockBox.className = "displayed animatedEnd";
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                } else if (scene.time !== undefined) {
+                    clockBox.className = "displayed";
+                }
                 video.src = `ressources/videos/${sceneId}.mp4`;
                 video.type = "video/mp4";
                 video.controls = true;
@@ -73,7 +122,7 @@ async function setupScene(sceneId) {
                     video.style.height = targetHeight;
 
                     choiceBox.style.opacity = 1;
-                    if (scene.time)
+                    if (scene.time) 
                         setTimeLeft(scene.time);
 
                         

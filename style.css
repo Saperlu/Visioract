@@ -92,6 +92,10 @@ video {
     border: black solid 3px;
 }
 
+
+#clockBox {
+    display: none;
+}
 #clockBox.displayed {
     display: initial;
     font-family: 'Digital Display Regular';
@@ -106,7 +110,22 @@ video {
     margin-top: 5px;
 }
 
-#clockBox.displayed.animated {
+#clockBox.displayed.animatedBegin {
+    display: initial;
+    font-family: 'Digital Display Regular';
+    z-index: 3;
+    font-size: xx-large;
+    color: red;
+    position: absolute;
+    align-self: center;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 5px 5px 2px 5px;
+    margin-top: 5px;
+    animation: clockAnimation 2s reverse;
+}
+
+#clockBox.displayed.animatedEnd {
     display: initial;
     font-family: 'Digital Display Regular';
     z-index: 3;
@@ -121,9 +140,6 @@ video {
     animation: clockAnimation 2s forwards;
 }
 
-#clockBox {
-    display: none;
-}
 
 @keyframes clockAnimation {
     0% {
