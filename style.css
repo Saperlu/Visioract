@@ -70,16 +70,6 @@ video {
     transition-property: opacity;
 }
 
-#cacheChoiceBox {
-    position: fixed;
-    background-color: black;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    bottom: 0px;
-    transition: background-color 0.5s;
-}
-
 .choice {
     cursor: pointer;
     width: 30%;
@@ -102,12 +92,12 @@ video {
     z-index: 3;
     font-size: xx-large;
     color: red;
-    position: absolute;
+    position: fixed;
     align-self: center;
     background-color: #2d2d2d;
     border-radius: 8px;
     padding: 5px 5px 2px 5px;
-    margin-top: 5px;
+    top: 5px;
 }
 
 #clockBox.displayed.animatedBegin {
@@ -116,12 +106,12 @@ video {
     z-index: 3;
     font-size: xx-large;
     color: red;
-    position: absolute;
+    position: fixed;
     align-self: center;
     background-color: #2d2d2d;
     border-radius: 8px;
     padding: 5px 5px 2px 5px;
-    margin-top: 5px;
+    top: 5px;
     animation: clockAnimation 2s reverse;
 }
 
@@ -131,12 +121,12 @@ video {
     z-index: 3;
     font-size: xx-large;
     color: red;
-    position: absolute;
+    position: fixed;
     align-self: center;
     background-color: #2d2d2d;
     border-radius: 8px;
     padding: 5px 5px 2px 5px;
-    margin-top: 5px;
+    top: 5px;
     animation: clockAnimation 2s forwards;
 }
 
@@ -144,19 +134,22 @@ video {
 @keyframes clockAnimation {
     0% {
         opacity: 1;
-        margin-top: 5px;
+        top: 5px;
+        transform: translate(0,0);
         background-color: #2d2d2d;
         box-shadow: 0px 0px 0px 0px black;
         
     } 75% {
         opacity: 1;
         font-size: 50px;
-        margin-top: 150px;
+        top: 50%;
+        transform: translate(0,-50%);
         box-shadow: 0px 5px 15px 5px black;
     } 100% {
         opacity: 0;
         font-size: 50px;
-        margin-top: 150px;
+        top: 50%;
+        transform: translate(0,-50%);
         box-shadow: 0px 5px 15px 5px black;
     }
 }
@@ -233,11 +226,11 @@ map {
     
 }
 
-.piece h3 {
+.feuille h3 {
     text-align: center;
 }
 
-.piece p {
+.feuille p {
     text-align: justify;
 }
 
@@ -247,8 +240,9 @@ map {
     bottom: 10px;
     cursor: pointer;
     margin-bottom: 5px;
-    padding: 4px;
+    padding: 10px;
     background-color: gainsboro;
     border-radius: 10px;
     border: black solid 3px;   
+    font-size: larger;
 }
