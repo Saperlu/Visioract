@@ -30,7 +30,6 @@
                     "label": "Débuter",
                     "sceneId": "p1n_debut"
                 }
-                
             ]
         },
         "p1n_documentation_avec_badge": {
@@ -49,7 +48,6 @@
                         "titre": "Tickets de livraison Deliveroo de Bertrand",
                         "texte": "Daté du 16 avril 2021, 20 : 03. Pizzeria Giuseppino pour Mathieu.M."
                     }
-
                 ],
                 "portefeuille Geraldine": [
                     {
@@ -57,14 +55,13 @@
                         "type": "image",
                         "fileName": "pochette_bertrand_chocolatine.png"
                     }
-
                 ],
                 "pochette Bertrand": [
                     {
                         "label": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
                         "type": "feuille",
                         "titre": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
-                        "texte": "Bernard Bertrand a été licencié le 9 mars 2021 conformément à toutes les lois en rigueurs.<br/><br/>Il était employé à la boulangerie Ganne Freddy à Rosières-près-Troyes depuis 2 ans. C’était son 1er emploi après l’obtention de son CAP pâtisserie en 2019.\nMotif du licenciement : son employeur Marc Karl, propriétaire et gérant de la boulangerie Ganne Freddy, a licencié M. Bertrand suite à de nombreuses réprimandes sur son manque de ponctualité. Les retards « commençaient à se faire récurrents » et « gênaient considérablement le bon fonctionnement de l’entreprise » selon son employeur.<br/><br/>M. Karl estime qu’en 2 années, M. Bertrand a cumulé plus d’une centaine d’heures de retards.<br/><br/>L’employé plaide pour sa défense des problèmes de réveils et des difficultés à se lever le matin. Ses arguments n’ont pas été retenus."
+                        "texte": "Bernard Bertrand a été licencié le 9 mars 2021 conformément à toutes les lois en vigueur.<br/><br/>Il était employé à la boulangerie Ganne Freddy à Rosières-près-Troyes depuis 2 ans. C’était son 1er emploi après l’obtention de son CAP pâtisserie en 2019.\nMotif du licenciement : son employeur Marc Karl, propriétaire et gérant de la boulangerie Ganne Freddy, a licencié M. Bertrand suite à de nombreuses réprimandes sur son manque de ponctualité. Les retards « commençaient à se faire récurrents » et « gênaient considérablement le bon fonctionnement de l’entreprise » selon son employeur.<br/><br/>M. Karl estime qu’en 2 années, M. Bertrand a cumulé plus d’une centaine d’heures de retards.<br/><br/>L’employé plaide pour sa défense des problèmes de réveils et des difficultés à se lever le matin. Ses arguments n’ont pas été retenus."
                     },
                     {
                         "label": "Rapport de l’interrogatoire du 17/06/21 de Bernard Bertrand par l’enquêteur Khoury",
@@ -78,15 +75,8 @@
                         "titre": "Dépôt de plainte du 13/03/21 de Bernard Bertrand",
                         "texte": "Plainte déposée à 11h33.<br/><br/>Bernard Bertrand, licencié depuis quelques jours de la boulangerie Ganne Freddy, accuse son ex-employeur Marc Karl de vol. Selon lui, il lui aurait volé une propriété intellectuelle unique qui serait une « recette inédite et originale de baguette » qu’il aurait lui-même découvert.<br/><br/>Plainte rejetée."
                     }
-                    
                 ],
                 "pochette Géraldine": [
-                    {
-                        "label": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
-                        "type": "feuille",
-                        "titre": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
-                        "texte": "Jacqueline Géraldine est emportée et impulsive. Son engagement pour la défense de la chocolatine ne connait pas de limite.<br/><br/>Elle plaide ne pas avoir envoyé de mails « si explicites et menaçants que cela » et invoque comme preuve le fait qu’elle n’a mis en pratique aucune de ses « méthodes de préventions ».<br/><br/>Alibis : visio avec les membres de l’Ambassade Nationale de la Chocolatine."
-                    },
                     {
                         "label": "Dépôt de plainte du 20/05/21 de la boulangerie- pâtisserie Gérard",
                         "type": "feuille",
@@ -106,14 +96,17 @@
                         "texte": "Jacqueline Géraldine a encore frappé."
                     },
                     {
+                        "label": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
+                        "type": "feuille",
+                        "titre": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
+                        "texte": "Jacqueline Géraldine est emportée et impulsive. Son engagement pour la défense de la chocolatine ne connait pas de limite.<br/><br/>Elle plaide ne pas avoir envoyé de mails « si explicites et menaçants que cela » et invoque comme preuve le fait qu’elle n’a mis en pratique aucune de ses « méthodes de préventions ».<br/><br/>Alibis : visio-conférence avec les membres de l’Ambassade Nationale de la Chocolatine."
+                    },
+                    {
                         "label": "Mail de menace de Jacqueline Géraldine",
                         "type": "feuille",
                         "titre": "Mail de menace de Jacqueline Géraldine",            
-                        "texte": "Madame, monsieur<br></br>Suite à me dernière visite dans votre boulangerie, vous avez été informé des peines encourues pour outrage à l’honneur des chocolatines. Constatant que vous n’aviez pas opéré de changement pour redonner raison à cette appellation héritée des générations antérieures et empreintes de sagesse, moi, Jacqueline Géraldine, au nom de l’Ambassade Nationale de la Chocolatine, vous condamne donc a payé le prix de votre intolérable manque de respect.<br></br>Vous regretterez amèrement de ne pas avoir voulu vous montrer plus coopérants.<br></br>Jacqueline Géraldine,<br></br>Vice-Présidente de l’Ambassade Nationale de la Chocolatine<br></br>Envoyé depuis Iphone X."
+                        "texte": "Madame, monsieur<br></br>Suite à ma dernière visite dans votre boulangerie, vous avez été informé des peines encourues pour outrage à l’honneur des chocolatines. Constatant que vous n’aviez pas opéré de changement pour redonner raison à cette appellation héritée des générations antérieures et empreinte de sagesse, moi, Jacqueline Géraldine, au nom de l’Ambassade Nationale de la Chocolatine, vous condamne donc à payer le prix de votre intolérable manque de respect.<br></br>Vous regretterez amèrement de ne pas avoir voulu vous montrer plus coopérants.<br></br>Jacqueline Géraldine,<br></br>Vice-Présidente de l’Ambassade Nationale de la Chocolatine<br></br>Envoyé depuis Iphone X."
                     }
-
-                    
-
                 ],
                 "pochette bleue": [
                     {
@@ -126,9 +119,8 @@
                         "label": "Rapport du témoignage du 17/06/21 de Louanne Dupreux, employée de la boulangerie Ganne Freddy, par l’enquêteur Khoury",
                         "type": "feuille",
                         "titre": "Rapport du témoignage du 17/06/21 de Louanne Dupreux, employée de la boulangerie Ganne Freddy, par l’enquêteur Khoury",            
-                        "texte": "Louanne Dupreux a fermé à double tour la porte arrière de la boulangerie à 12h05 environ. Après avoir déjeuner avec ses collègues dans un parc non loin, elle est revenue à la boulangerie à 13h50 et a ouvert la porte de derrière (toujours fermée à double tour). Elle a alors constaté en même temps que ses 2 autres collègues que l’entièreté des produits qui étaient sur les étales de la boulangerie avaient disparus."
+                        "texte": "Louanne Dupreux a fermé à double tour la porte arrière de la boulangerie à 12h05 environ. Après avoir déjeuné avec ses collègues dans un parc non loin, elle est revenue à la boulangerie à 13h50 et a ouvert la porte de derrière (toujours fermée à double tour). Elle a alors constaté en même temps que ses 2 autres collègues que l’entièreté des produits qui étaient sur les étales de la boulangerie avait disparu."
                     }
-
                 ],
                 "badge": [
                     {
@@ -156,7 +148,6 @@
                         "titre": "Tickets de livraison Deliveroo de Bertrand",
                         "texte": "Daté du 16 avril 2021, 20 : 03. Pizzeria Giuseppino pour Mathieu.M."
                     }
-
                 ],
                 "portefeuille Geraldine": [
                     {
@@ -164,14 +155,13 @@
                         "type": "image",
                         "fileName": "pochette_bertrand_chocolatine.png"
                     }
-
                 ],
                 "pochette Bertrand": [
                     {
                         "label": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
                         "type": "feuille",
                         "titre": "Modalités de licenciement de Bernard Bertrand (mars 2021)",
-                        "texte": "Bernard Bertrand a été licencié le 9 mars 2021 conformément à toutes les lois en rigueurs.<br/><br/>Il était employé à la boulangerie Ganne Freddy à Rosières-près-Troyes depuis 2 ans. C’était son 1er emploi après l’obtention de son CAP pâtisserie en 2019.\nMotif du licenciement : son employeur Marc Karl, propriétaire et gérant de la boulangerie Ganne Freddy, a licencié M. Bertrand suite à de nombreuses réprimandes sur son manque de ponctualité. Les retards « commençaient à se faire récurrents » et « gênaient considérablement le bon fonctionnement de l’entreprise » selon son employeur.<br/><br/>M. Karl estime qu’en 2 années, M. Bertrand a cumulé plus d’une centaine d’heures de retards.<br/><br/>L’employé plaide pour sa défense des problèmes de réveils et des difficultés à se lever le matin. Ses arguments n’ont pas été retenus."
+                        "texte": "Bernard Bertrand a été licencié le 9 mars 2021 conformément à toutes les lois en vigueur.<br/><br/>Il était employé à la boulangerie Ganne Freddy à Rosières-près-Troyes depuis 2 ans. C’était son 1er emploi après l’obtention de son CAP pâtisserie en 2019.\nMotif du licenciement : son employeur Marc Karl, propriétaire et gérant de la boulangerie Ganne Freddy, a licencié M. Bertrand suite à de nombreuses réprimandes sur son manque de ponctualité. Les retards « commençaient à se faire récurrents » et « gênaient considérablement le bon fonctionnement de l’entreprise » selon son employeur.<br/><br/>M. Karl estime qu’en 2 années, M. Bertrand a cumulé plus d’une centaine d’heures de retards.<br/><br/>L’employé plaide pour sa défense des problèmes de réveils et des difficultés à se lever le matin. Ses arguments n’ont pas été retenus."
                     },
                     {
                         "label": "Rapport de l’interrogatoire du 17/06/21 de Bernard Bertrand par l’enquêteur Khoury",
@@ -188,12 +178,6 @@
                     
                 ],
                 "pochette Géraldine": [
-                    {
-                        "label": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
-                        "type": "feuille",
-                        "titre": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
-                        "texte": "Jacqueline Géraldine est emportée et impulsive. Son engagement pour la défense de la chocolatine ne connait pas de limite.<br/><br/>Elle plaide ne pas avoir envoyé de mails « si explicites et menaçants que cela » et invoque comme preuve le fait qu’elle n’a mis en pratique aucune de ses « méthodes de préventions ».<br/><br/>Alibis : visio avec les membres de l’Ambassade Nationale de la Chocolatine."
-                    },
                     {
                         "label": "Dépôt de plainte du 20/05/21 de la boulangerie- pâtisserie Gérard",
                         "type": "feuille",
@@ -213,14 +197,17 @@
                         "texte": "Jacqueline Géraldine a encore frappé."
                     },
                     {
+                        "label": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
+                        "type": "feuille",
+                        "titre": "Rapport de l’interrogatoire du 17/06/21 de Jacqueline Géraldine par l’enquêteur Khoury",
+                        "texte": "Jacqueline Géraldine est emportée et impulsive. Son engagement pour la défense de la chocolatine ne connait pas de limite.<br/><br/>Elle plaide ne pas avoir envoyé de mails « si explicites et menaçants que cela » et invoque comme preuve le fait qu’elle n’a mis en pratique aucune de ses « méthodes de préventions ».<br/><br/>Alibis : visio-conférence avec les membres de l’Ambassade Nationale de la Chocolatine."
+                    },
+                    {
                         "label": "Mail de menace de Jacqueline Géraldine",
                         "type": "feuille",
                         "titre": "Mail de menace de Jacqueline Géraldine",            
-                        "texte": "Madame, monsieur<br></br>Suite à me dernière visite dans votre boulangerie, vous avez été informé des peines encourues pour outrage à l’honneur des chocolatines. Constatant que vous n’aviez pas opéré de changement pour redonner raison à cette appellation héritée des générations antérieures et empreintes de sagesse, moi, Jacqueline Géraldine, au nom de l’Ambassade Nationale de la Chocolatine, vous condamne donc a payé le prix de votre intolérable manque de respect.<br></br>Vous regretterez amèrement de ne pas avoir voulu vous montrer plus coopérants.<br></br>Jacqueline Géraldine,<br></br>Vice-Présidente de l’Ambassade Nationale de la Chocolatine<br></br>Envoyé depuis Iphone X."
+                        "texte": "Madame, monsieur<br></br>Suite à ma dernière visite dans votre boulangerie, vous avez été informé des peines encourues pour outrage à l’honneur des chocolatines. Constatant que vous n’aviez pas opéré de changement pour redonner raison à cette appellation héritée des générations antérieures et empreinte de sagesse, moi, Jacqueline Géraldine, au nom de l’Ambassade Nationale de la Chocolatine, vous condamne donc à payer le prix de votre intolérable manque de respect.<br></br>Vous regretterez amèrement de ne pas avoir voulu vous montrer plus coopérants.<br></br>Jacqueline Géraldine,<br></br>Vice-Présidente de l’Ambassade Nationale de la Chocolatine<br></br>Envoyé depuis Iphone X."
                     }
-
-                    
-
                 ],
                 "pochette bleue": [
                     {
@@ -233,16 +220,9 @@
                         "label": "Rapport du témoignage du 17/06/21 de Louanne Dupreux, employée de la boulangerie Ganne Freddy, par l’enquêteur Khoury",
                         "type": "feuille",
                         "titre": "Rapport du témoignage du 17/06/21 de Louanne Dupreux, employée de la boulangerie Ganne Freddy, par l’enquêteur Khoury",            
-                        "texte": "Louanne Dupreux a fermé à double tour la porte arrière de la boulangerie à 12h05 environ. Après avoir déjeuner avec ses collègues dans un parc non loin, elle est revenue à la boulangerie à 13h50 et a ouvert la porte de derrière (toujours fermée à double tour). Elle a alors constaté en même temps que ses 2 autres collègues que l’entièreté des produits qui étaient sur les étales de la boulangerie avaient disparus."
+                        "texte": "Louanne Dupreux a fermé à double tour la porte arrière de la boulangerie à 12h05 environ. Après avoir déjeuné avec ses collègues dans un parc non loin, elle est revenue à la boulangerie à 13h50 et a ouvert la porte de derrière (toujours fermée à double tour). Elle a alors constaté en même temps que ses 2 autres collègues que l’entièreté des produits qui étaient sur les étales de la boulangerie avait disparu."
                     }
 
-                ],
-                "badge": [
-                    {
-                        "label": "Prendre le badge",
-                        "type": "scene",
-                        "sceneId": "p1n_documentation_sans_badge"
-                    }
                 ]
             },
             "choices": []
