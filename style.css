@@ -70,16 +70,6 @@ video {
     transition-property: opacity;
 }
 
-#cacheChoiceBox {
-    position: fixed;
-    background-color: black;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    bottom: 0px;
-    transition: background-color 0.5s;
-}
-
 .choice {
     cursor: pointer;
     width: 30%;
@@ -250,8 +240,9 @@ map {
     bottom: 10px;
     cursor: pointer;
     margin-bottom: 5px;
-    padding: 4px;
+    padding: 10px;
     background-color: gainsboro;
     border-radius: 10px;
     border: black solid 3px;   
+    font-size: larger;
 }
