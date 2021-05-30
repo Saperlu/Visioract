@@ -38,7 +38,7 @@
             "width": 5988,
             "height": 2954,
             "nextScene": {
-                "sceneId": "p3n_interroger_les_suspects",
+                "sceneId": "p2n_j’ai_le_badge",
                 "label": "Arrêter de regarder le bureau"
             },  
             "clicks": {
@@ -46,6 +46,11 @@
 
                 ],
                 "portefeuille Geraldine": [
+                    {
+                        "label": "Photo",
+                        "type": "image",
+                        "fileName": "pochette_bertrand_chocolatine.png"
+                    }
 
                 ],
                 "pochette Bertrand": [
@@ -60,11 +65,6 @@
                         "type": "feuille",
                         "titre": "Rapport de l’interrogatoire du 17/06/21 de Bernard Bertrand par l’enquêteur Khoury",
                         "texte": "Bernard Bertrand est très calme et bienveillant. Cependant, il éprouve un mépris profond pour son ex-employeur M. Karl.<br/><br/>Il plaide qu’il souhaite simplement que sa plainte du 13 mars soit entendue et qu’il ne résout aucun de ses problèmes par des confrontations violentes ou des provocations.<br/><br/>Alibis : livraisons Deliveroo sur ce créneau horaire"
-                    },
-                    {
-                        "label": "Photo",
-                        "type": "image",
-                        "fileName": "pochette_bertrand_chocolatine.png"
                     }
                     
                 ],
@@ -89,7 +89,7 @@
             "width": 5988,
             "height": 2954,
             "nextScene": {
-                "sceneId": "p3n_interroger_les_suspects",
+                "sceneId": "p2n_j’ai_pas_le_badge",
                 "label": "Arrêter de regarder le bureau"
             },  
             "clicks": {
@@ -97,6 +97,11 @@
 
                 ],
                 "portefeuille Geraldine": [
+                    {
+                        "label": "Photo",
+                        "type": "image",
+                        "fileName": "pochette_bertrand_chocolatine.png"
+                    }
 
                 ],
                 "pochette Bertrand": [
@@ -111,11 +116,6 @@
                         "type": "feuille",
                         "titre": "Rapport de l’interrogatoire du 17/06/21 de Bernard Bertrand par l’enquêteur Khoury",
                         "texte": "Bernard Bertrand est très calme et bienveillant. Cependant, il éprouve un mépris profond pour son ex-employeur M. Karl.<br/><br/>Il plaide qu’il souhaite simplement que sa plainte du 13 mars soit entendue et qu’il ne résout aucun de ses problèmes par des confrontations violentes ou des provocations.<br/><br/>Alibis : livraisons Deliveroo sur ce créneau horaire"
-                    },
-                    {
-                        "label": "Photo",
-                        "type": "image",
-                        "fileName": "pochette_bertrand_chocolatine.png"
                     }
                     
                 ],
@@ -910,7 +910,7 @@
             "choices": [
                 {
                     "label": "Documentation",
-                    "sceneId": "p1n_documentation",
+                    "sceneId": "p1n_documentation_avec_badge",
                     "autoChoice" : true
                 }
             ]
