@@ -22,7 +22,7 @@ let currentSceneType;
 
 function loadData(callback) {
     let req = new XMLHttpRequest();
-    req.open('GET', "data.json");
+    req.open('GET', "data.JSON");
     req.send();
     req.onreadystatechange = () => {
         if (req.readyState === 4 && req.status === 200) {
