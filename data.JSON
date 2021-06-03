@@ -1,5 +1,5 @@
 {
-    "entryPoint" : "debug",
+    "entryPoint" : "p1n_debut",
     "scenes": {
         "debug": {
             "type": "text",
