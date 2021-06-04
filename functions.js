@@ -37,7 +37,7 @@ function handleChoice(sceneId) {
 
 async function setupScene(sceneId) {
     // TODO : Remove this
-    if (sceneId === "pKn_debut") {
+    if (sceneId === "p1n_debut") {
         seenScenes = {};
     }
 
@@ -340,7 +340,7 @@ function setTimeLeft(timeTaken) {
             clockBox.className = "displayed animated";
             // TODO : Remplacer par accuser les suspects
             setTimeout(() => {
-                handleChoice("pKn_alibi")
+                handleChoice(data.whenNoTimeScene);
             }, 2500);
         }
     }, 1020);
