@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Bienvenue sur Visioract</title>
+    <title>Visioract</title>
 </head>
 <body>
-    <div class="feuille" style="opacity: 1;">
-        <h3>Bienvenue sur Visioract</h3>
-        <p>Ceci est un lecteur de vidéo interactive. A divers points clés du court-métrage qui vous est présenté, un choix vous sera proposé et votre réponse aura un impact sur le déroulé de l'histoire. <br> <br>Il vous sera proposé à un moment de l'intrigue de prendre connaissance d'un dossier. Vous êtes invité, lorsque cela sera le cas, à cliquer sur les objets devant vous afin d'intéragir avec vous. <br> <br>A tout moment, si vous rencontrez un problème, veuillez appuyer sur la touche <b>R</b> de votre clavier pour relancer la scène en cours. <br>Ne rafraichissez pas la page ou vous perdrez votre progression. <br><br>Ce projet vous est présenté par Morgane Bréhé et Lucien Charleux. <br>Nous vous souhaitons une bonne expérience.</p>
+    <div id="videoBox">
+        <div id="clockBox">20:00</div>
+        <div id="choiceBox"></div>
     </div>
-    <div id="choiceBox">
-        <a href="main.html" style="all: unset;">
-            <div class="choice">Commencer le visionnage</div>
-        </a>
-    </div>
+    <div id="pointAndClickBox"></div>
+
+    <script src="pANDc.js"></script>
+    <script src="functions.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

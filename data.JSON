@@ -1,5 +1,5 @@
 {
-    "entryPoint" : "p1n_debut",
+    "entryPoint" : "p1n_pre_debut",
     "whenNoTimeScene": "p5n_faire_choix_accusation",
     "scenes": {
         "debug": {
@@ -29,6 +29,15 @@
                 },
                 {
                     "label": "Débuter",
+                    "sceneId": "p1n_debut"
+                }
+            ]
+        },
+        "p1n_pre_debut": {
+            "type": "menu",
+            "choices": [
+                {
+                    "label": "Débuter le visionnage",
                     "sceneId": "p1n_debut"
                 }
             ]
