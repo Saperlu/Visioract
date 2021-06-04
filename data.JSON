@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "entryPoint" : "p1n_debut",
+=======
+    "entryPoint" : "debug",
+>>>>>>> debugging
     "whenNoTimeScene": "p5n_faire_choix_accusation",
     "scenes": {
         "debug": {
