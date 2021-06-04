@@ -1,5 +1,5 @@
 {
-    "entryPoint" : "p1n_debut",
+    "entryPoint" : "p1n_pre_debut",
     "whenNoTimeScene": "p5n_faire_choix_accusation",
     "scenes": {
         "debug": {
@@ -1043,6 +1043,15 @@
                 {
                     "label": "Le moyen de transport utilisé ?",
                     "sceneId": "p1n_le_moyen_de_transport_utilise_"
+                }
+            ]
+        },
+        "p1n_pre_debut": {
+            "type": "menu video",
+            "choices": [
+                {
+                    "label": "Commencer le court-métrage",
+                    "sceneId": "p1n_debut"
                 }
             ]
         },
