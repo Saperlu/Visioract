@@ -1055,6 +1055,15 @@
                 }
             ]
         },
+        "p1n_pre_debut": {
+            "type": "menu video",
+            "choices": [
+                {
+                    "label": "Commencer le court-métrage",
+                    "sceneId": "p1n_debut"
+                }
+            ]
+        },
         "p1n_des_suspects_potentiels_": {
             "type": "video",
             "choices": [

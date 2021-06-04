@@ -36,7 +36,7 @@ function handleChoice(sceneId) {
 
 async function setupScene(sceneId) {
     // TODO : Remove this
-    if (sceneId === "p1n_debut") {
+    if (sceneId === "p1n_pre_debut") {
         seenScenes = {};
     }
 
