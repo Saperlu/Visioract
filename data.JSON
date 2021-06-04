@@ -1,5 +1,6 @@
 {
     "entryPoint" : "debug",
+    "whenNoTimeScene": "p5n_faire_choix_accusation",
     "scenes": {
         "debug": {
             "type": "text",
@@ -252,7 +253,7 @@
 
         "pKn_karl_debut": {
             "type": "video",
-            "time": 2,
+            "time": 11,
             "timeDisplayed": [78.196312],
             "timeNotDisplayed": [0, 53.487],
             "timeDisplayedAnimatedBegin": [42.583458],
@@ -269,7 +270,7 @@
         },
         "pKn_assurance": {
             "type": "video",
-            "time": 20,
+            "time": 159,
             "choices": [
                 {
                     "label": "Poser des questions",
@@ -340,7 +341,7 @@
         },
         "pKn_antecedents_bertrand": {
             "type": "video",
-            "time": 60,
+            "time": 72,
             "choices": [
                 {
                     "label": "MENU PRINCIPAL",
@@ -351,7 +352,7 @@
         },
         "pKn_sport": {
             "type": "video",
-            "time": 1200,
+            "time": 11,
             "choices": [
                 {
                     "label": "MENU PRINCIPAL",
@@ -362,7 +363,7 @@
         },
         "pKn_utt": {
             "type": "video",
-            "time": 500,
+            "time": 15,
             "choices": [
                 {
                     "label": "MENU PRINCIPAL",
@@ -373,6 +374,7 @@
         },
         "pKn_alibi": {
             "type": "video",
+            "time": 21,
             "choices": [
                 {
                     "label": "Qu'avez-vous mangé ?",
@@ -390,6 +392,7 @@
         },
         "pKn_ou_etiez_vous_": {
             "type": "video",
+            "time": 72,
             "choices": [
                 {
                     "label": "Le cambriolage a eu lieu à ce moment là...",
@@ -403,6 +406,7 @@
         },
         "pKn_qu_avez_vous_mange": {
             "type": "video",
+            "time": 70,
             "choices": [
                 {
                     "label": "Le cambriolage a eu lieu à ce moment là...",
@@ -416,6 +420,7 @@
         },
         "pKn_les_faits_se_sont_deroules": {
             "type": "video",
+            "time": 55,
             "choices": [
                 {
                     "label": "Poser d'autres questions",
@@ -426,6 +431,7 @@
         },
         "pKn_clef": {
             "type": "video",
+            "time": 78,
             "choices": [
                 {
                     "label": "Monsieur Goudran, c'est un de vos employés ?",
@@ -471,6 +477,7 @@
         },
         "pKn_clefs___menu": {
             "type": "menu video",
+            "time": 0,
             "choices": [
                 {
                     "label": "Monsieur Goudran, c'est un de vos employés ?",
@@ -516,6 +523,7 @@
         },
         "pKn_mgoudran": {
             "type": "video",
+            "time": 12,
             "choices": [
                 {
                     "label": "Clefs - MENU",
@@ -526,6 +534,7 @@
         },
         "pKn_femme": {
             "type": "video",
+            "time": 37,
             "choices": [
                 {
                     "label": "Clefs - MENU",
@@ -536,6 +545,7 @@
         },
         "pKn_mlledupreux": {
             "type": "video",
+            "time": 46,
             "choices": [
                 {
                     "label": "Clefs - MENU",
@@ -546,6 +556,7 @@
         },
         "pKn_fin_clef_suite": {
             "type": "video",
+            "time": 56,
             "choices": [
                 {
                     "label":"Interroger sur l'assurance de la boulangerie",
@@ -574,6 +585,7 @@
         
         "pKn_finir_interrogatoire": {
             "type": "video",
+            "time": 28,
             "choices": [
                 {
                     "label": "Interroger Géraldine",
@@ -591,7 +603,7 @@
         },
         "pGn_debut": {
             "type": "video",
-            "time": 5,
+            "time": 150,
             "timeDisplayed": [0, 33.297],
             "timeNotDisplayed": [9.20],
             "choices": [
@@ -604,6 +616,7 @@
         },
         "pGn_menu": {
             "type": "menu video",
+            "time": 0,
             "choices": [
                 {
                     "label": "En quoi consiste votre métier exactement ?",
@@ -701,6 +714,7 @@
         },
         "pGn_le_mail_menacant": {
             "type": "video",
+            "time": 65,
             "choices": [
                 {
                     "label": "MENU",
@@ -711,6 +725,7 @@
         },
         "pGn_alibi_": {
             "type": "video",
+            "time": 23,
             "choices": [
                 {
                     "label": "MENU",
@@ -721,6 +736,7 @@
         },
         "pGn_clef_": {
             "type": "video",
+            "time": 92,
             "choices": [ 
                 {
                     "label": "MENU",
@@ -731,6 +747,7 @@
         },
         "pGn_en_quoi_consiste_votre_metier_exactement_": {
             "type": "video",
+            "time": 37,
             "choices": [ 
                 {
                     "label": "MENU",
@@ -741,6 +758,7 @@
         },
         "pGn_vous_êtes_fiere_de_ce_mail_": {
             "type": "video",
+            "time": 47,
             "choices": [
                 {
                     "label": "MENU",
@@ -751,6 +769,7 @@
         },
         "pGn_le_grand_ponte_": {
             "type": "video",
+            "time": 16,
             "choices": [
                 {
                     "label": "MENU",
@@ -761,6 +780,7 @@
         },
         "pGn_vous_avez_des_preuves_": {
             "type": "video",
+            "time": 17,
             "choices": [
                 {
                     "label": "MENU",
@@ -771,6 +791,7 @@
         },
         "pGn_fin_de_l’interrogatoire": {
             "type": "video",
+            "time": 23,
             "choices": [
                 {
                     "label": "Interroger Géraldine",
@@ -801,7 +822,7 @@
         
         "pBn_debut": {
             "type": "video",
-            "time": 6,
+            "time": 78,
             "timeDisplayed": [0,33.912],
             "timeNotDisplayed": [8.74],
             "choices": [
@@ -814,6 +835,7 @@
         },      
         "pBn_menu": {
             "type": "menu video",
+            "time": 0,
             "choices": [
                 {
                     "label": "Quel est votre alibi ?",
@@ -891,6 +913,7 @@
         },
         "pBn_alibi_": {
             "type": "video",
+            "time": 67,
             "choices": [
                 {
                     "label": "MENU",
@@ -901,6 +924,7 @@
         },
         "pBn_deverouiller_le_telephone": {
             "type": "video",
+            "time": 40,
             "choices": [
                 {
                     "label": "MENU",
@@ -911,6 +935,7 @@
         },
         "pBn_licenciement": {
             "type": "video",
+            "time": 180,
             "choices": [
                 {
                     "label": "MENU",
@@ -921,6 +946,7 @@
         },
         "pBn_votre_jean": {
             "type": "video",
+            "time": 80,
             "choices": [
                 {
                     "label": "MENU",
@@ -931,6 +957,7 @@
         },
         "pBn_clef_": {
             "type": "video",
+            "time": 130,
             "choices": [
                 {
                     "label": "MENU",
@@ -941,6 +968,7 @@
         },
         "pBn_utt_": {
             "type": "video",
+            "time": 39,
             "choices": [
                 {
                     "label": "MENU",
@@ -951,6 +979,7 @@
         },
         "pBn_fin": {
             "type": "video",
+            "time": 20,
             "choices": [
                 {
                     "label": "Interroger Géraldine",
