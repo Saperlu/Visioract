@@ -18,7 +18,6 @@ let currentSceneId = "";
 let currentSceneType;
 
 
-// TODO : Transitions between scenes
 
 function loadData(callback) {
     let req = new XMLHttpRequest();
@@ -51,7 +50,6 @@ async function setupScene(sceneId) {
     // Content
     switch (scene.type) {
         case "text": 
-            // TODO transition if not text before
             choiceBox.style.display = "flex";
             choiceBox.style.opacity = 1;
             textBox = document.createElement("div");
@@ -131,6 +129,8 @@ async function setupScene(sceneId) {
                 video.style.height = video.clientHeight + "px";
             break;
             case "menu video":
+                if (scene.time !== undefined)
+                    clockBox.className = "displayed";
                 video = document.createElement("video");
                 if (isTimeToSet && timeLeft - data.scenes[previousSceneId].time*1000 <= timeEnd) {
                     isTimeToSet = false;
