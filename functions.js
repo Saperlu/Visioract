@@ -57,6 +57,23 @@ async function setupScene(sceneId) {
             textBox.textContent = scene.text;
             videoBox.insertBefore(textBox, choiceBox);
             break;
+        case "message":
+            choiceBox.style.display = "flex";
+            choiceBox.style.opacity = 1;
+            feuille = document.createElement("div");
+            feuille.className = "feuille";
+            feuille.style.opacity=1;
+            feuille.style.fontFamily="unset";
+            h = document.createElement("h3");
+            h.innerHTML = scene.titre;
+            p = document.createElement("p");
+            p.innerHTML = scene.texte;
+
+            feuille.appendChild(h)
+            feuille.appendChild(p)
+            videoBox.appendChild(feuille)
+
+            break; 
             case "video":
                 video = document.createElement("video");
                 if (scene.time !== undefined && (scene.timeDisplayed || scene.timeNotDisplayed)) {
@@ -136,7 +153,7 @@ async function setupScene(sceneId) {
                     isTimeToSet = false;
                     video.style.display="none";
                     setTimeLeft(data.scenes[previousSceneId].time);
-                } else {
+                }
                     video.src = `ressources/videos/${sceneId}.mp4`;
                     video.type = "video/mp4";
                     video.controls = false;
@@ -155,7 +172,7 @@ async function setupScene(sceneId) {
                     };
     
                     video.style.height = video.clientHeight + "px";
-                }
+                
                 videoBox.insertBefore(video, choiceBox);
             break;
             case "point and click":
@@ -234,6 +251,9 @@ async function clearSetup() {
     switch (currentSceneType) {
         case "text":
             videoBox.removeChild(textBox);
+            break;
+        case "message":
+            videoBox.removeChild(document.getElementsByClassName("feuille")[0]);
             break;
         case "video":
             videoBox.removeChild(document.getElementsByTagName("video")[0]);
